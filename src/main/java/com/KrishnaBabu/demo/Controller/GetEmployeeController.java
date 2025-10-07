@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/employee/")
-public class GetEmployeController {
+public class GetEmployeeController {
 
     @GetMapping("allEmployees")
     public String getAllEmployees() {
