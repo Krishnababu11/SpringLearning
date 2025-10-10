@@ -28,11 +28,9 @@ public class StudentModel {
     @NotBlank(message = "College name must not be empty")
     private String collegeName;
 
-    // ✅ Default constructor
+
     public StudentModel() {
     }
-
-    // ✅ Parameterized constructor
     public StudentModel(int studentId, String studentName, String subject, String department, int age, String email, String collegeName) {
         this.studentId = studentId;
         this.studentName = studentName;
@@ -43,7 +41,6 @@ public class StudentModel {
         this.collegeName = collegeName;
     }
 
-    // ✅ Getters and Setters
     public int getStudentId() {
         return studentId;
     }
