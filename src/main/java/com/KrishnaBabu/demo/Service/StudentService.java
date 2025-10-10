@@ -14,13 +14,8 @@ public class StudentService {
         )
     );
 
-
-    private int nextId = 1;
-
-
-
-
-    public boolean createStudent(StudentModel student) {
+     private int nextId = 1;
+     public boolean createStudent(StudentModel student) {
         if (student.getStudentId() == 0) {  // auto-generate ID
             student.setStudentId(nextId++);
         }
@@ -29,12 +24,6 @@ public class StudentService {
     public List<StudentModel> retrieveAll() {
         return new ArrayList<>(database);
     }
-
-//    public StudentModel findById(int id) {
-//        return database.stream()
-//                .filter(s -> s.getStudentId() == id)
-//                .findFirst();
-//    }
 
     public boolean removeStudent(int id) {
         return database.removeIf(s -> s.getStudentId() == id);
